@@ -24,6 +24,7 @@ namespace WindowsFormsApp1
         /// <param name="e"></param>
         private void About_button_Click(object sender, EventArgs e)
         {
+            
             Form2 form2 = new Form2();
 
             //親フォームの中心に表示
