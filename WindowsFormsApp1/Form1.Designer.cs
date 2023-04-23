@@ -30,7 +30,8 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.About_button = new System.Windows.Forms.ToolStripMenuItem();
+            this.modal_button = new System.Windows.Forms.ToolStripMenuItem();
+            this.modeless_button = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -38,30 +39,38 @@ namespace WindowsFormsApp1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.About_button});
+            this.modal_button,
+            this.modeless_button});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(445, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
+            this.menuStrip1.Size = new System.Drawing.Size(297, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // About_button
+            // modal_button
             // 
-            this.About_button.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.About_button.Name = "About_button";
-            this.About_button.Size = new System.Drawing.Size(78, 29);
-            this.About_button.Text = "About";
-            this.About_button.Click += new System.EventHandler(this.About_button_Click);
+            this.modal_button.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.modal_button.Name = "modal_button";
+            this.modal_button.Size = new System.Drawing.Size(82, 22);
+            this.modal_button.Text = "modal_form";
+            this.modal_button.Click += new System.EventHandler(this.Modal_button_Click);
+            // 
+            // modeless_button
+            // 
+            this.modeless_button.Name = "modeless_button";
+            this.modeless_button.Size = new System.Drawing.Size(98, 22);
+            this.modeless_button.Text = "modeless_form";
+            this.modeless_button.Click += new System.EventHandler(this.Modeless_button_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(445, 217);
+            this.ClientSize = new System.Drawing.Size(297, 145);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
@@ -76,7 +85,8 @@ namespace WindowsFormsApp1
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem About_button;
+        private System.Windows.Forms.ToolStripMenuItem modal_button;
+        private System.Windows.Forms.ToolStripMenuItem modeless_button;
     }
 }
 

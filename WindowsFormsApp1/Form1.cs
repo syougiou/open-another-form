@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
@@ -18,19 +11,40 @@ namespace WindowsFormsApp1
         }
 
         /// <summary>
-        /// aboutフォームを表示
+        /// モードレスフォームとして開く
+        /// フォームを開いたままでも他のフォームを操作することができるフォーム
+        /// 
+        /// 親フォームの中心に表示したい場合は、Form2の「StartPotion」プロパティをManualに変更する。
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void About_button_Click(object sender, EventArgs e)
+        private void Modeless_button_Click(object sender, EventArgs e)
         {
-            
             Form2 form2 = new Form2();
 
+            form2.Left = this.Left + (this.Width - form2.Width) / 2;
+            form2.Top = this.Top + (this.Height - form2.Height) / 2;
+
+            //モードレスフォーム
+            form2.Show();
+        }
+
+        /// <summary>
+        /// モーダルフォームとして開く
+        /// 開いたフォームを閉じるまでは、他のフォームを操作することができないフォーム
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Modal_button_Click(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3();
+
             //親フォームの中心に表示
-            form2.StartPosition = FormStartPosition.CenterParent;
-            form2.ShowDialog(this);
-            form2.Dispose();
+            form3.StartPosition = FormStartPosition.CenterParent;
+
+            //モーダルフォーム
+            form3.ShowDialog(this);
+            form3.Dispose();
         }
     }
 }

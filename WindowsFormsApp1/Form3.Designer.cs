@@ -1,6 +1,7 @@
-﻿namespace WindowsFormsApp1
+﻿
+namespace WindowsFormsApp1
 {
-    partial class Form2
+    partial class Form3
     {
         /// <summary>
         /// Required designer variable.
@@ -28,46 +29,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.OK_button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.OK_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // OK_button
-            // 
-            this.OK_button.Location = new System.Drawing.Point(133, 25);
-            this.OK_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.OK_button.Name = "OK_button";
-            this.OK_button.Size = new System.Drawing.Size(59, 27);
-            this.OK_button.TabIndex = 0;
-            this.OK_button.Text = "OK";
-            this.OK_button.UseVisualStyleBackColor = true;
-            this.OK_button.Click += new System.EventHandler(this.OK_button_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 33);
+            this.label1.Location = new System.Drawing.Point(29, 35);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 12);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 3;
             this.label1.Text = "フォームを閉じる";
             // 
-            // Form2
+            // OK_button
+            // 
+            this.OK_button.Location = new System.Drawing.Point(130, 27);
+            this.OK_button.Margin = new System.Windows.Forms.Padding(2);
+            this.OK_button.Name = "OK_button";
+            this.OK_button.Size = new System.Drawing.Size(59, 27);
+            this.OK_button.TabIndex = 2;
+            this.OK_button.Text = "OK";
+            this.OK_button.UseVisualStyleBackColor = true;
+            this.OK_button.Click += new System.EventHandler(this.OK_button_Click);
+            // 
+            // Form3
             // 
             this.AcceptButton = this.OK_button;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(219, 81);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.OK_button);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
-            this.Name = "Form2";
+            this.Name = "Form3";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Form2";
+            this.Text = "Form3";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -75,7 +73,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button OK_button;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button OK_button;
     }
 }
